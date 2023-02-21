@@ -30,15 +30,13 @@ ob.ComputeAllLCSs(l_t)
 ```
 
 
-
 ### Requirements 
 
 - C++ compiler C++11 or greater
 
 - Python 3.x
 
-  
 
 ### Installation
 
-``` pip install FastMatch```
+``` pip install LCSFinder```

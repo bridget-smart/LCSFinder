@@ -1,23 +1,21 @@
 Metadata-Version: 2.1
 Name: LCSFinder
-Version: 0.0.2
-Summary: A toolkit for quickly calculating longest common substrings with specific relevance to entropy estimation.
+Version: 0.0.3
+Summary: A toolkit for quickly calculating longest common substrings with specific relevance to non-parametric entropy estimation.
 Home-page: https://github.com/bridget-smart/LCSFinder
 Author: Bridget Smart and Max Ward
 Author-email: bridget.anna.smart@gmail.com
 License: MIT license
-Platform: UNKNOWN
 Description-Content-Type: text/markdown
-License-File: LICENSE
+License-File: LICENSE.md
 
-### LCSFinder
+### FastMatch
 
-A package for quickly calculating longest common substrings with a fixed starting location of one substring. For a fixed start in the source string at index $i$, the matching substring is allowed to end after this index, but must begin prior to index $i$ in the target string. 
+A package for quickly calculating longest common substrings with a fixed starting location of one substring. Once the two strings, $s_1$ and $s_2$ are defined, this package can be used to find the length of the longest substring that starts in the range s2[0..j) and matches a prefix of the string s1[i..n). This prefix must begin at index $i$ in $s_1$ and must end before index $j$ in $s_2$. The indices $(i,j)$ are passed as a list of tuples with increasing $i,j$, allowing many of these matches to be computed at a time.
 
 This algorithm employs properties of a sorted suffix array to allow the longest match length to be found in O(1) with O(N) precomputation.
 
-This function is designed to be used within a Kontoyannis Shannon entropy estimator, to improve computational speed.
-
+This function is designed to be used within a modified Kontoyannis Shannon entropy estimator, to improve computational speed. This implementation is currently provided in the [ProcessEntropy package](https://github.com/tobinsouth/ProcessEntropy).
  
 
 ### Example Usage
@@ -43,18 +41,13 @@ ob.ComputeAllLCSs(l_t)
 ```
 
 
-
 ### Requirements 
 
 - C++ compiler C++11 or greater
 
 - Python 3.x
 
-  
 
 ### Installation
 
-``` pip install FastMatch```
-
-
-
+``` pip install LCSFinder```
