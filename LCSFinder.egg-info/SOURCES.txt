@@ -1,0 +1,12 @@
+LCSFinder.cpp
+LCSFinder.h
+LCSFinder.py
+LCSFinder_wrap.cxx
+LICENSE
+README.md
+setup.cfg
+setup.py
+LCSFinder.egg-info/PKG-INFO
+LCSFinder.egg-info/SOURCES.txt
+LCSFinder.egg-info/dependency_links.txt
+LCSFinder.egg-info/top_level.txt

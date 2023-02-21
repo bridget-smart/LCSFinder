@@ -1,0 +1,60 @@
+Metadata-Version: 2.1
+Name: LCSFinder
+Version: 0.0.2
+Summary: A toolkit for quickly calculating longest common substrings with specific relevance to entropy estimation.
+Home-page: https://github.com/bridget-smart/LCSFinder
+Author: Bridget Smart and Max Ward
+Author-email: bridget.anna.smart@gmail.com
+License: MIT license
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+### LCSFinder
+
+A package for quickly calculating longest common substrings with a fixed starting location of one substring. For a fixed start in the source string at index $i$, the matching substring is allowed to end after this index, but must begin prior to index $i$ in the target string. 
+
+This algorithm employs properties of a sorted suffix array to allow the longest match length to be found in O(1) with O(N) precomputation.
+
+This function is designed to be used within a Kontoyannis Shannon entropy estimator, to improve computational speed.
+
+ 
+
+### Example Usage
+
+```
+# load packages
+import LCSFinder as lcs
+import numpy as np
+
+# initialise strings
+list_source = np.random.randint(1,10,100)
+list_target = np.random.randint(1,10,100)
+
+# set up objects
+source = lcs.Vector1D([int(x) for x in ([np.floor(x) for x in test1])])
+target = lcs.Vector1D([int(x) for x in ([np.floor(x) for x in test2])])
+ob = lcs.LCSFinder(source,target)
+
+# set up indices to search from
+l_t =  lcs.Vector2D(tuple((i,i+1) for i in range(len(list_source))))
+
+ob.ComputeAllLCSs(l_t)
+```
+
+
+
+### Requirements 
+
+- C++ compiler C++11 or greater
+
+- Python 3.x
+
+  
+
+### Installation
+
+``` pip install FastMatch```
+
+
+
