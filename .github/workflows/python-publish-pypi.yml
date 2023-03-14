@@ -1,5 +1,4 @@
 name: Publish Python Package
-{% raw %}
 on:
   release:
     types: [created]
@@ -50,4 +49,3 @@ jobs:
       run: |
         python -m build
         twine upload dist/*
-{% endraw %}
