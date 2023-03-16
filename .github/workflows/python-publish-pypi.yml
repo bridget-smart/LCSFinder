@@ -40,13 +40,13 @@ jobs:
         pip install setuptools wheel twine build
     - name: Build
       run: |
+        mkdir dist
+        mv *.whl dist/
         python -m build --wheel
 
   upload_pypi:
     needs: [test, deploy]
     runs-on: ubuntu-latest
-    # upload to PyPI on every tag starting with 'v'
-    if: github.event_name == 'push' && startsWith(github.ref, 'refs/tags/v')
     steps:
     - uses: actions/download-artifact@v3
       with:
