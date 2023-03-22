@@ -1,3 +1,14 @@
+Metadata-Version: 2.1
+Name: LCSFinder
+Version: 1.0.0
+Summary: A toolkit for quickly calculating longest common substrings with specific relevance to entropy estimation.
+Home-page: https://github.com/bridget-smart/LCSFinder
+Author: Bridget Smart and Max Ward
+Author-email: bridget.anna.smart@gmail.com
+License: MIT license
+Description-Content-Type: text/markdown
+License-File: LICENSE.md
+
 ### FastMatch
 
 A package for quickly calculating longest common substrings with a fixed starting location of one substring. Once the two strings, $s_1$ and $s_2$ are defined, this package can be used to find the length of the longest substring that starts in the range s2[0..j) and matches a prefix of the string s1[i..n). This prefix must begin at index $i$ in $s_1$ and must end before index $j$ in $s_2$. The indices $(i,j)$ are passed as a list of tuples with increasing $i,j$, allowing many of these matches to be computed at a time.
