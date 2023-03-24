@@ -8,25 +8,25 @@
 
 class LCSFinder {
     private:
-    int32_t s1sz, s2sz;
-    std::vector<int32_t> s, suff_arr;
-    std::vector<std::vector<int32_t> > prank;
+    long long int s1sz, s2sz;
+    std::vector<long long int> s, suff_arr;
+    std::vector<std::vector<long long int> > prank;
 
     void BuildSuffixArray(); 
 
     public:
-    LCSFinder(const std::vector<int32_t>& s1, const std::vector<int32_t>& s2);
+    LCSFinder(const std::vector<long long int>& s1, const std::vector<long long int>& s2);
 
-    int32_t FindLCP(int32_t i, int32_t j);
+    long long int FindLCP(long long int i, long long int j);
 
-    std::vector<int32_t> ComputeAllLCSs(std::vector<std::pair<int32_t,int32_t> >& inds);
+    std::vector<long long int> ComputeAllLCSs(std::vector<std::pair<long long int,long long int> >& inds);
     
-    std::vector<int32_t> GetS();
+    std::vector<long long int> GetS();
 
-    std::vector<int32_t> GetSA();
+    std::vector<long long int> GetSA();
 
 };
 
 
 
-// std::vector<int> BruteForceLCSs(const std::vector<std::pair<int,int > > & inds, const std::vector<int>& s1, const std::vector<int>& s2);
+// std::vector<long long int> BruteForceLCSs(const std::vector<std::pair<long long int,long long int > > & inds, const std::vector<long long int>& s1, const std::vector<long long int>& s2);

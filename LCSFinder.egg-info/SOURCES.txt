@@ -10,3 +10,4 @@ LCSFinder.egg-info/PKG-INFO
 LCSFinder.egg-info/SOURCES.txt
 LCSFinder.egg-info/dependency_links.txt
 LCSFinder.egg-info/top_level.txt
+tests/test.py
