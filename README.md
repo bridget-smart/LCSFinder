@@ -41,4 +41,4 @@ ob.ComputeAllLCSs(l_t)
 
 ### Installation
 
-``` pip install FastMatch```
+``` pip install LCSFinder```
