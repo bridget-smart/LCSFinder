@@ -1,6 +1,6 @@
 ### LCSFinder
 
-A package for quickly calculating longest common substrings with a fixed starting location of one substring. Once the two strings, $s_1$ and $s_2$ are defined, this package can be used to find the length of the longest substring that starts in the range $s_2[0..j)$ and matches a prefix of the string $s_1[i..n)$. This prefix must begin at index $i$ in $s_1$ and must end before index $j$ in $s_2$. The indices $(i,j)$ are passed as a list of tuples with increasing $i,j$, allowing many of these matches to be computed at a time.
+A package for quickly calculating longest common substrings with a fixed starting location of one substring. Once the two strings, $s_1$ and $s_2$ are defined, this package can be used to find the length of the longest substring that starts in the range $s_2[0..j)$ and matches a prefix of the string $s_1[i..n)$. This prefix must begin at index $i$ in $s_1$ and must start before index $j$ in $s_2$. The indices $(i,j)$ are passed as a list of tuples with increasing $i,j$, allowing many of these matches to be computed at a time.
 
 This algorithm employs properties of a sorted suffix array to allow the longest match length to be found in O(1) with O(N) precomputation.
 
